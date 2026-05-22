@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pousada Alto da Cruz | Hospedagem em Camaçari</title>
+  <meta name="description" content="Hospedagem prática, confortável e bem localizada no centro de Camaçari. Reserve pelo WhatsApp." />
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="icon" type="image/png" href="../favicon.png">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio"><span>Centro de Camaçari</span><strong>Pousada Alto da Cruz</strong></a>
+    <nav>
+      <a href="#quartos">Acomodações</a>
+      <a href="#estrutura">Estrutura</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#localizacao">Localização</a>
+      <a href="../src/admin.html">Admin</a>
+    </nav>
+    <a class="btn small" href="https://wa.me/5571985610497" target="_blank">Reservar agora</a>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <span class="tag">Hospedagem prática, confortável e bem localizada</span>
+          <h1>Hospedagem no coração de Camaçari.</h1>
+          <p>A Pousada Alto da Cruz oferece quartos confortáveis, localização estratégica e atendimento rápido para uma estadia tranquila.</p>
+          <div class="actions">
+            <a class="btn" href="#reserva">Ver disponibilidade</a>
+            <a class="btn outline" href="#quartos">Conhecer quartos</a>
+          </div>
+          <div class="checks">
+            <span>✔ Quartos climatizados</span>
+            <span>✔ Localização central</span>
+            <span>✔ Reserva rápida</span>
+          </div>
+        </div>
+        <div class="hero-card">
+          <img src="../assets/images/fachada.jpg" alt="Fachada da Pousada Alto da Cruz">
+        </div>
+      </div>
+    </section>
+
+    <section id="reserva" class="booking-card">
+      <div class="booking-header">
+        <span class="tag">Reserva rápida</span>
+        <h2>Consultar disponibilidade</h2>
+      </div>
+      <form id="bookingForm">
+        <div class="form-group">
+          <label for="nome">Seu Nome</label>
+          <input id="nome" placeholder="Nome completo" required>
+        </div>
+        <div class="form-group">
+          <label for="telefone">WhatsApp</label>
+          <input id="telefone" placeholder="(71) 99999-9999" type="tel" required>
+        </div>
+        <div class="form-group">
+          <label for="cpf">CPF <span class="optional">(opcional)</span></label>
+          <input id="cpf" placeholder="000.000.000-00" type="text">
+        </div>
+        <div class="form-group">
+          <label for="checkin">Data de Entrada</label>
+          <input type="date" id="checkin" required>
+        </div>
+        <div class="form-group">
+          <label for="checkout">Data de Saída</label>
+          <input type="date" id="checkout" required>
+        </div>
+        <div class="form-group">
+          <label for="hospedes">Hóspedes</label>
+          <select id="hospedes" required>
+            <option value="">Selecione...</option>
+            <option value="1">1 hóspede</option>
+            <option value="2">2 hóspedes</option>
+            <option value="3">3 hóspedes</option>
+            <option value="4">4 hóspedes</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="quarto">Acomodação</label>
+          <select id="quarto" required>
+            <option value="">Selecionar acomodação...</option>
+            <option value="Quarto casal">Quarto casal</option>
+            <option value="Quarto duplo">Quarto duplo</option>
+            <option value="Quarto individual">Quarto individual</option>
+            <option value="Consultar melhor opção">Consultar melhor opção</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="observacoes">Observações <span class="optional">(opcional)</span></label>
+          <textarea id="observacoes" placeholder="Informações adicionais para sua reserva..." rows="3"></textarea>
+        </div>
+        <div class="booking-btn-container">
+          <button class="btn" type="submit" id="submitBtn">Enviar Reserva</button>
+          <a class="btn outline" href="https://wa.me/5571985610497" target="_blank" id="whatsappBtn">Consultar no WhatsApp</a>
+        </div>
+        <p class="form-message" id="formMessage"></p>
+      </form>
+    </section>
+
+    <section class="section">
+      <span class="tag">Destaques</span>
+      <h2>Conforto, localização e praticidade em um só lugar.</h2>
+      <div class="features">
+        <article><b>❄️ Ar-condicionado</b><p>Quartos climatizados para mais conforto.</p></article>
+        <article><b>🛏️ Quartos variados</b><p>Opções para casal, individual e duas camas.</p></article>
+        <article><b>📍 Localização central</b><p>Perto do comércio, transporte e serviços.</p></article>
+        <article><b>💬 Reserva rápida</b><p>Atendimento direto pelo WhatsApp.</p></article>
+      </div>
+    </section>
+
+    <section id="quartos" class="section warm">
+      <span class="tag">Acomodações</span>
+      <h2>Quartos pensados para o seu descanso</h2>
+      <div class="rooms">
+        <article><img src="../assets/images/quarto-casal.jpg" alt="Quarto casal"><h3>Quarto casal</h3><p>Ideal para quem busca conforto e tranquilidade.</p><a href="#reserva">Reservar ➔</a></article>
+        <article><img src="../assets/images/quarto-duplo.jpg" alt="Quarto duplo"><h3>Quarto duplo</h3><p>Camas separadas e espaço funcional.</p><a href="#reserva">Reservar ➔</a></article>
+        <article><img src="../assets/images/quarto-simples.jpg" alt="Quarto individual"><h3>Quarto individual</h3><p>Opção prática para estadia rápida.</p><a href="#reserva">Reservar ➔</a></article>
+      </div>
+    </section>
+
+    <section id="estrutura" class="section">
+      <span class="tag">Estrutura</span>
+      <h2>Ambiente acolhedor e funcional</h2>
+      <div class="gallery mini">
+        <img src="../assets/images/recepcao.jpg" alt="Recepção">
+        <img src="../assets/images/cafedamanha.jpg" alt="Café da manhã">
+        <img src="../assets/images/area-restaurante.jpg" alt="Área restaurante">
+      </div>
+    </section>
+
+    <section id="galeria" class="section warm">
+      <span class="tag">Galeria real</span>
+      <h2>Conheça a pousada por dentro e por fora</h2>
+      <div class="gallery">
+        <img src="../assets/images/fachada.jpg" alt="Fachada">
+        <img src="../assets/images/quarto-toalha.jpg" alt="Quarto casal toalha">
+        <img src="../assets/images/quarto-duplo.jpg" alt="Quarto duplo">
+        <img src="../assets/images/recepcao.jpg" alt="Área interna">
+      </div>
+    </section>
+
+    <section id="localizacao" class="section contact">
+      <div>
+        <span class="tag">Localização</span>
+        <h2>Localização estratégica em Camaçari</h2>
+        <p><strong>Endereço:</strong> Tv. Getúlio Vargas, 19 - Centro, Camaçari, BA</p>
+        <p><strong>WhatsApp:</strong> (71) 98561-0497</p>
+        <p><strong>E-mail:</strong> pousadaaltocruz@gmail.com</p>
+      </div>
+      <div class="cta-box">
+        <h3>Garanta sua estadia agora mesmo</h3>
+        <p>Atendimento rápido, resposta imediata e melhor custo-benefício.</p>
+        <a class="btn" href="https://wa.me/5571985610497" target="_blank">Chamar no WhatsApp</a>
+      </div>
+    <div class="map-box">
+		<iframe
+		src="https://www.google.com/maps?q=Tv.%20Get%C3%BAlio%20Vargas%2C%2019%20-%20Centro%2C%20Cama%C3%A7ari%20-%20BA&output=embed"
+		width="100%"
+		height="350"
+		style="border:0;"
+		allowfullscreen=""
+		loading="lazy"
+		referrerpolicy="no-referrer-when-downgrade">
+	</iframe>
+	</div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast hidden" role="status"></div>
+  <div id="loadingOverlay" class="loading-overlay hidden"><div class="loader"></div></div>
+  <a class="whats" href="https://wa.me/5571985610497" target="_blank" aria-label="WhatsApp">✆</a>
+  <footer>© 2026 Pousada Alto da Cruz • Camaçari - BA</footer>
+
+  <script type="module" src="./script.js"></script>
+</body>
+</html>
