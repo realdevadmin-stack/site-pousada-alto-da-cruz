@@ -11,6 +11,7 @@ Resumo rápido:
 Como funciona:
 - O frontend público está em `/site_pousadaaltodacruz`. Ele carrega `./styles.css` e `./script.js` (módulo ES). O código do Firebase permanece em `/src/firebase.js` e é importado por `site_pousadaaltodacruz/script.js` como `../src/firebase.js`.
 - O painel administrativo está em `/src/admin.html` e usa `/src/admin.js`. A autenticação e lógica de reservas permanecem inalteradas (módulos originais mantidos).
+- Os arquivos `admin.html`, `admin.js` e `firebase.js` foram removidos da raiz e agora estão centralizados em `/src`.
 
 Comandos úteis:
 - Instalação (se houver dependências): `npm install`
@@ -21,8 +22,7 @@ Notas sobre deploy:
 
 Backup:
 - Antes de mover arquivos, versões de backup foram salvas em `/backups/backup-20260522-120000/`.
+- Os arquivos públicos antigos da raiz (`index.html`, `script.js`, `styles.css`, `favicon.png`) foram removidos depois da reorganização.
 
 Commit automático:
 - commit: "refactor: organizar estrutura profissional do projeto"
-
-Se quiser, posso mover as imagens para `site_pousadaaltodacruz/assets/images/` também (atualmente as imagens permanecem em `assets/images/` para garantir que nada quebre durante a reorganização).
