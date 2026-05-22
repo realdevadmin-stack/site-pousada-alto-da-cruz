@@ -25,6 +25,12 @@ document.getElementById('bookingForm').addEventListener('submit', async function
     messageEl.className = 'error';
     return;
   }
+
+  if (new Date(`${checkout}T00:00:00`) <= new Date(`${checkin}T00:00:00`)) {
+    messageEl.textContent = 'A data de saída precisa ser posterior à entrada.';
+    messageEl.className = 'error';
+    return;
+  }
   
   try {
     submitBtn.disabled = true;

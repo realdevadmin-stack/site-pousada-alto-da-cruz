@@ -30,6 +30,14 @@ export async function enviarReserva(data) {
       throw new Error('Campos obrigatórios faltando');
     }
 
+    if (Number.isNaN(Number(data.people)) || Number(data.people) < 1) {
+      throw new Error('Quantidade de hóspedes inválida');
+    }
+
+    if (new Date(`${data.checkOut}T00:00:00`) <= new Date(`${data.checkIn}T00:00:00`)) {
+      throw new Error('A data de saída precisa ser posterior à entrada');
+    }
+
     // Create reservation document
     const reservation = {
       guestName: data.guestName,
@@ -37,7 +45,7 @@ export async function enviarReserva(data) {
       cpf: data.cpf || '',
       checkIn: data.checkIn,
       checkOut: data.checkOut,
-      people: data.people,
+      people: Number(data.people),
       roomType: data.roomType,
       notes: data.notes || '',
       source: 'site',
