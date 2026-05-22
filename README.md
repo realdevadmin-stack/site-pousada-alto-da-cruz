@@ -18,7 +18,10 @@ Comandos úteis:
 - Build (mantido): `npm run build`
 
 Notas sobre deploy:
-- Preserve as configurações do Cloudflare e Firebase. Se você usa um pipeline que publica a raiz do repositório, a pasta `site_pousadaaltodacruz` deve ser configurada como diretório público.
+- Cloudflare Pages deve publicar o conteúdo da pasta `site_pousadaaltodacruz` como raiz do site.
+- O `wrangler.toml` foi adicionado para servir este diretório como assets estáticos.
+- Não use `npx wrangler deploy` ou `npx wrangler versions upload` para este deploy estático; estes comandos são errados para o fluxo atual.
+- Se o pipeline publicar a raiz do repositório, configure o diretório público como `/` e o build output como `site_pousadaaltodacruz`.
 
 Backup:
 - Antes de mover arquivos, versões de backup foram salvas em `/backups/backup-20260522-120000/`.
